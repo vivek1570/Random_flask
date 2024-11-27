@@ -1,8 +1,9 @@
 from flask import Flask
 from flask import request
-from flask import url_for
+from flask import url_for,render_template
 
 app=Flask(__name__)
 
-url_for('static', filename='style.css')
-
+@app.route('/')
+def index():
+  return render_template('index.html')
