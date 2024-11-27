@@ -1,8 +1,8 @@
-from flask import Flask 
-from markupsafe import escape
+from flask import Flask
+from flask import request
+from flask import url_for
+
 app=Flask(__name__)
 
-@app.route("/about/<name>")
+url_for('static', filename='style.css')
 
-def project(name):
-  return f"ada mapale {escape(name)}"
