@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Get the person info poda para nari {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="peru">Name</label>
+        <input type="text" name="peru"
+               placeholder="Enter your name" class="form-control"
+               value="{{ request.form['peru'] }}"></input>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" name="phone"
+             placeholder="Enter your phone number" class="form-control"
+             value="{{ request.form['phone'] }}">
+  </div>
+  
+
+    <div class="form-group">
+        <label for="content">Address</label>
+        <textarea name="addr" placeholder="Address"
+                  class="form-control">{{ request.form['addr'] }}</textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+{% endblock %}

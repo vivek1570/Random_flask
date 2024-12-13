@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block content %}
+<h1>{% block title %} Info list main page {% endblock %}</h1>
+{% for info in infos %}
+<h2>{{info['peru']}}</h2>
+<span class="badge badge-primary">{{info['phone']}}</span>
+<h3>{{info['addr']}}</h3>
+<hr />
+{% endfor %} {% endblock %}
